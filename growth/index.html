@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Growth Engine — LeadExpert</title>
+<meta name="robots" content="noindex">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#05080f;--cyan:#06b6d4;--cyan-dark:#0891b2;--gray:#64748b;--border:#e2e8f0;--bg:#f8fafc}
+body{font-family:'Inter','Segoe UI',system-ui,sans-serif;background:var(--bg);color:#0f172a;line-height:1.6}
+a{text-decoration:none;color:inherit}
+header{background:linear-gradient(135deg,#05080f,#0f3a4d 60%,#06b6d4);color:#fff;padding:2.5rem 1.5rem 3rem}
+.wrap{max-width:1080px;margin:0 auto;padding:0 1.25rem}
+.htop{display:flex;align-items:center;gap:.7rem;margin-bottom:1.25rem}
+.hlogo{width:42px;height:42px;background:#06b6d4;border-radius:11px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.4rem;color:#05080f}
+.hbrand{font-weight:800;font-size:1.1rem}.hbrand small{display:block;font-weight:400;opacity:.6;font-size:.75rem}
+header h1{font-size:clamp(1.6rem,4vw,2.3rem);font-weight:800;margin-bottom:.5rem}
+header p{opacity:.82;max-width:640px}
+.stats{display:flex;flex-wrap:wrap;gap:1.5rem;margin-top:1.5rem}
+.stat strong{display:block;font-size:1.7rem;font-weight:800}.stat span{font-size:.8rem;opacity:.7}
+.content{max-width:1080px;margin:0 auto;padding:2rem 1.25rem 4rem}
+.slabel{font-size:.72rem;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:.1em;margin:2.5rem 0 1rem;display:flex;align-items:center;gap:.5rem}
+.slabel:first-child{margin-top:0}
+.slabel::after{content:'';flex:1;height:1px;background:var(--border)}
+.plan-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem}
+.plan-card{background:#fff;border:1px solid var(--border);border-left:4px solid var(--c,#06b6d4);border-radius:12px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.4rem;transition:transform .12s,box-shadow .2s}
+.plan-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px -8px rgba(0,0,0,.18)}
+.plan-top{display:flex;justify-content:space-between;align-items:center}
+.plan-icon{font-size:1.5rem}.plan-lang{font-size:.72rem;font-weight:700;color:var(--gray)}
+.plan-svc{font-weight:800;font-size:1rem}
+.plan-kw{font-size:.82rem;color:#475569;background:var(--bg);padding:.35rem .5rem;border-radius:6px}
+.plan-go{font-size:.82rem;font-weight:700;color:var(--cyan-dark);margin-top:.2rem}
+.panel{background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.5rem}
+.row{display:flex;flex-wrap:wrap;gap:.8rem;margin-bottom:1rem}
+.field{flex:1;min-width:160px;display:flex;flex-direction:column;gap:.3rem}
+.field label{font-size:.78rem;font-weight:700;color:var(--gray)}
+.field select{font-family:inherit;font-size:.95rem;padding:.6rem;border:1.5px solid #cbd5e1;border-radius:8px;background:#fff}
+.out{margin-top:1rem}
+.out h4{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--gray);margin-bottom:.5rem}
+.kw-list{display:flex;flex-direction:column;gap:.4rem;margin-bottom:1rem}
+.kw{background:var(--bg);border:1px solid var(--border);border-radius:7px;padding:.5rem .7rem;font-size:.9rem;display:flex;justify-content:space-between;gap:1rem;align-items:center}
+.kw .copy{cursor:pointer;font-size:.75rem;color:var(--cyan-dark);font-weight:700;white-space:nowrap}
+.preview-btn{display:inline-flex;align-items:center;gap:.4rem;background:var(--cyan);color:#fff;font-weight:700;padding:.7rem 1.2rem;border-radius:8px;border:none;cursor:pointer;font-family:inherit;font-size:.95rem}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem}
+.svc-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:1.1rem;border-top:4px solid var(--c)}
+.svc-card .ic{font-size:1.6rem}.svc-card h3{font-size:1rem;margin:.4rem 0 .2rem}.svc-card p{font-size:.82rem;color:#475569}
+.ideas{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem}
+.idea{background:#fff;border:1px solid var(--border);border-radius:12px;padding:1.1rem 1.2rem}
+.idea h3{font-size:.95rem;margin-bottom:.35rem;display:flex;gap:.5rem;align-items:center}
+.idea h3::before{content:'💡'}
+.idea p{font-size:.85rem;color:#475569}
+footer{text-align:center;padding:2rem;font-size:.8rem;color:var(--gray)}
+.note{font-size:.8rem;color:var(--gray);margin-top:.6rem}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="htop">
+      <div class="hlogo">L</div>
+      <div class="hbrand">LeadExpert Growth Engine<small>tools.leadexpert.be/growth</small></div>
+    </div>
+    <h1>Bouw elke dag funnels die ranken én converteren</h1>
+    <p>Eén commandopost voor internationale groei. Kies een combinatie, open de live funnel, en domineer de markt — sector per sector, taal per taal.</p>
+    <div class="stats">
+      <div class="stat"><strong>3.276</strong><span>mogelijke funnelpagina's</span></div>
+      <div class="stat"><strong>9</strong><span>diensten</span></div>
+      <div class="stat"><strong>14</strong><span>sectoren</span></div>
+      <div class="stat"><strong>3</strong><span>talen</span></div>
+      <div class="stat"><strong>25</strong><span>markten/steden</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="content">
+
+  <div class="slabel">🎯 Vandaag bouwen — jouw dagelijkse plan</div>
+  <div class="plan-grid"><a class="plan-card" href="https://leadexpert.be/en/leads/elektricien/berlin" target="_blank" rel="noopener" style="--c:#f97316">
+      <div class="plan-top"><span class="plan-icon">🎯</span><span class="plan-lang">🇬🇧 EN</span></div>
+      <div class="plan-svc">Lead generation</div>
+      <div class="plan-kw">get more electrician customers Berlin</div>
+      <div class="plan-go">Bekijk funnel →</div>
+    </a><a class="plan-card" href="https://leadexpert.be/nl/leads/slotenmaker/amsterdam" target="_blank" rel="noopener" style="--c:#f97316">
+      <div class="plan-top"><span class="plan-icon">🎯</span><span class="plan-lang">🇳🇱 NL</span></div>
+      <div class="plan-svc">Leadgeneratie</div>
+      <div class="plan-kw">meer klanten slotenmaker Amsterdam</div>
+      <div class="plan-go">Bekijk funnel →</div>
+    </a><a class="plan-card" href="https://leadexpert.be/fr/webshop/loodgieter/lyon" target="_blank" rel="noopener" style="--c:#22c55e">
+      <div class="plan-top"><span class="plan-icon">🛒</span><span class="plan-lang">🇫🇷 FR</span></div>
+      <div class="plan-svc">Boutique en ligne</div>
+      <div class="plan-kw">création boutique en ligne plombier Lyon</div>
+      <div class="plan-go">Bekijk funnel →</div>
+    </a><a class="plan-card" href="https://leadexpert.be/en/google-ads/tandarts/berlin" target="_blank" rel="noopener" style="--c:#ea4335">
+      <div class="plan-top"><span class="plan-icon">📈</span><span class="plan-lang">🇬🇧 EN</span></div>
+      <div class="plan-svc">Google Ads</div>
+      <div class="plan-kw">dental practice google ads Berlin</div>
+      <div class="plan-go">Bekijk funnel →</div>
+    </a><a class="plan-card" href="https://leadexpert.be/fr/leads/slotenmaker/geneve" target="_blank" rel="noopener" style="--c:#f97316">
+      <div class="plan-top"><span class="plan-icon">🎯</span><span class="plan-lang">🇫🇷 FR</span></div>
+      <div class="plan-svc">Génération de leads</div>
+      <div class="plan-kw">plus de clients serrurier Genève</div>
+      <div class="plan-go">Bekijk funnel →</div>
+    </a><a class="plan-card" href="https://leadexpert.be/nl/website/elektricien/eindhoven" target="_blank" rel="noopener" style="--c:#06b6d4">
+      <div class="plan-top"><span class="plan-icon">🌐</span><span class="plan-lang">🇳🇱 NL</span></div>
+      <div class="plan-svc">Website</div>
+      <div class="plan-kw">website laten maken elektricien Eindhoven</div>
+      <div class="plan-go">Bekijk funnel →</div>
+    </a></div>
+  <p class="note">Dit plan ververst elke dag automatisch. Open elke funnel, controleer de copy, en publiceer. 6 funnels per dag = 2.190 per jaar.</p>
+
+  <div class="slabel">🔍 Funnel & keyword research</div>
+  <div class="panel">
+    <div class="row">
+      <div class="field"><label>Taal</label><select id="s-lang"></select></div>
+      <div class="field"><label>Dienst</label><select id="s-service"></select></div>
+      <div class="field"><label>Sector</label><select id="s-sector"></select></div>
+      <div class="field"><label>Stad / markt</label><select id="s-city"></select></div>
+    </div>
+    <button class="preview-btn" id="openFunnel">🚀 Open live funnel</button>
+    <div class="out">
+      <h4>Long-tail zoekwoorden voor deze combinatie</h4>
+      <div class="kw-list" id="kwList"></div>
+      <h4>Live URL</h4>
+      <div class="kw"><span id="funnelUrl"></span><span class="copy" data-copy="url">kopieer</span></div>
+    </div>
+  </div>
+
+  <div class="slabel">🧰 Diensten in de engine</div>
+  <div class="svc-grid">
+    <div class="svc-card" style="--c:#06b6d4"><span class="ic">🌐</span><h3>Website</h3><p>Een website die klanten oplevert</p></div><div class="svc-card" style="--c:#f97316"><span class="ic">🎯</span><h3>Leadgeneratie</h3><p>Een stroom van nieuwe aanvragen</p></div><div class="svc-card" style="--c:#22c55e"><span class="ic">🛒</span><h3>Webshop</h3><p>Online verkopen, dag en nacht</p></div><div class="svc-card" style="--c:#25d366"><span class="ic">💬</span><h3>WhatsApp-automatisatie</h3><p>Antwoord klanten automatisch, 24/7</p></div><div class="svc-card" style="--c:#8b5cf6"><span class="ic">🤖</span><h3>AI-agent</h3><p>Een digitale medewerker die nooit slaapt</p></div><div class="svc-card" style="--c:#3b82f6"><span class="ic">💡</span><h3>Chatbot</h3><p>Zet bezoekers om in klanten, automatisch</p></div><div class="svc-card" style="--c:#ef4444"><span class="ic">🔍</span><h3>Lokale SEO</h3><p>Bovenaan in Google in </p></div><div class="svc-card" style="--c:#ea4335"><span class="ic">📈</span><h3>Google Ads</h3><p>Direct bovenaan Google, vanaf dag één</p></div><div class="svc-card" style="--c:#ec4899"><span class="ic">📧</span><h3>E-mailmarketing</h3><p>Verander eenmalige klanten in vaste klanten</p></div>
+  </div>
+  <p class="note">Nieuwe dienst nodig (bv. SEO, Google Ads, e-mailmarketing)? Voeg één blok toe aan <code>catalog.js</code> → 1050 nieuwe pagina's in elke taal.</p>
+
+  <div class="slabel">🏆 Ideeën om te domineren</div>
+  <div class="ideas">
+    <div class="idea"><h3>Voeg dagelijks 5–10 funnels toe</h3><p>Elke nieuwe combo = een nieuw long-tail zoekwoord waarop je kan ranken. Consistentie verslaat perfectie.</p></div><div class="idea"><h3>Eén sector volledig afdekken</h3><p>Pak één sector en bouw álle services × steden. Word dé autoriteit voor die niche voor je naar de volgende gaat.</p></div><div class="idea"><h3>Vertaal je toppers naar FR + EN</h3><p>Een funnel die in het NL converteert, doet dat vaak ook internationaal. Drie talen = drie keer het bereik.</p></div><div class="idea"><h3>Koppel de leads aan je CRM</h3><p>Zet LEAD_WEBHOOK_URL → automatisch e-mail, opvolging en CRM. Geen lead valt nog tussen de mazen.</p></div><div class="idea"><h3>Bouw funnels rond seizoenspieken</h3><p>Speel in op wat de markt nú zoekt (eindejaar, lente-renovaties, nieuwjaarsacties) met tijdelijke trial-funnels.</p></div><div class="idea"><h3>Verzamel echte reviews</h3><p>Vervang de voorbeeldreviews door echte klantcitaten. Sterren in Google = meer clicks = meer leads.</p></div>
+  </div>
+
+</div>
+
+<footer>© 2026 LeadExpert · <a href="/">← Alle tools</a> · <a href="/promote">📣 Promote Cockpit</a> · <a href="mailto:info@leadexpert.be">info@leadexpert.be</a></footer>
+
+<script>
+const DATA={"funnelBase":"https://leadexpert.be","langs":[{"k":"nl","label":"Nederlands","flag":"🇳🇱"},{"k":"fr","label":"Français","flag":"🇫🇷"},{"k":"en","label":"English","flag":"🇬🇧"}],"services":[{"k":"website","name":"Website","icon":"🌐","color":"#06b6d4"},{"k":"leads","name":"Leadgeneratie","icon":"🎯","color":"#f97316"},{"k":"webshop","name":"Webshop","icon":"🛒","color":"#22c55e"},{"k":"whatsapp-automatisatie","name":"WhatsApp-automatisatie","icon":"💬","color":"#25d366"},{"k":"ai-agent","name":"AI-agent","icon":"🤖","color":"#8b5cf6"},{"k":"chatbot","name":"Chatbot","icon":"💡","color":"#3b82f6"},{"k":"lokale-seo","name":"Lokale SEO","icon":"🔍","color":"#ef4444"},{"k":"google-ads","name":"Google Ads","icon":"📈","color":"#ea4335"},{"k":"email-marketing","name":"E-mailmarketing","icon":"📧","color":"#ec4899"}],"sectors":[{"k":"aannemer","name":"aannemer"},{"k":"autogarage","name":"autogarage"},{"k":"tandarts","name":"tandartspraktijk"},{"k":"vastgoedmakelaar","name":"vastgoedmakelaar"},{"k":"kapper","name":"kapper"},{"k":"restaurant","name":"restaurant"},{"k":"boekhouder","name":"boekhouder"},{"k":"fysiotherapeut","name":"kinesist"},{"k":"elektricien","name":"elektricien"},{"k":"schoonheidsinstituut","name":"schoonheidsinstituut"},{"k":"advocaat","name":"advocaat"},{"k":"loodgieter","name":"loodgieter"},{"k":"tuinaannemer","name":"tuinaannemer"},{"k":"slotenmaker","name":"slotenmaker"}],"cities":{"nl":[{"k":"antwerpen","name":"Antwerpen"},{"k":"gent","name":"Gent"},{"k":"brussel","name":"Brussel"},{"k":"mechelen","name":"Mechelen"},{"k":"hasselt","name":"Hasselt"},{"k":"brugge","name":"Brugge"},{"k":"leuven","name":"Leuven"},{"k":"amsterdam","name":"Amsterdam"},{"k":"rotterdam","name":"Rotterdam"},{"k":"eindhoven","name":"Eindhoven"}],"fr":[{"k":"bruxelles","name":"Bruxelles"},{"k":"liege","name":"Liège"},{"k":"namur","name":"Namur"},{"k":"charleroi","name":"Charleroi"},{"k":"paris","name":"Paris"},{"k":"lyon","name":"Lyon"},{"k":"marseille","name":"Marseille"},{"k":"geneve","name":"Genève"}],"en":[{"k":"london","name":"London"},{"k":"dublin","name":"Dublin"},{"k":"amsterdam","name":"Amsterdam"},{"k":"berlin","name":"Berlin"},{"k":"dubai","name":"Dubai"},{"k":"new-york","name":"New York"},{"k":"toronto","name":"Toronto"},{"k":"sydney","name":"Sydney"}]}};
+const $=(id)=>document.getElementById(id);
+function fill(sel,items,val,label){sel.innerHTML=items.map(i=>'<option value="'+i[val]+'">'+i[label]+'</option>').join('')}
+fill($('s-lang'),DATA.langs.map(l=>({k:l.k,name:l.flag+' '+l.label})),'k','name');
+fill($('s-service'),DATA.services.map(s=>({k:s.k,name:s.icon+' '+s.name})),'k','name');
+fill($('s-sector'),DATA.sectors,'k','name');
+function refreshCities(){fill($('s-city'),DATA.cities[$('s-lang').value],'k','name');}
+function kw(lang,service,sector,city){
+  const sec=DATA.sectors.find(x=>x.k===sector).name;
+  const svc=DATA.services.find(x=>x.k===service).name.toLowerCase();
+  const cn=(DATA.cities[lang].find(x=>x.k===city)||{name:city}).name;
+  const NL=[svc+' '+sec+' '+cn,'beste '+svc+' voor '+sec+' '+cn,svc+' '+sec+' '+cn+' prijs',sec+' '+cn+' '+svc+' nodig'];
+  const FR=[svc+' '+sec+' '+cn,'meilleur '+svc+' pour '+sec+' '+cn,svc+' '+sec+' '+cn+' prix',sec+' '+cn+' besoin '+svc];
+  const EN=[sec+' '+svc+' '+cn,'best '+svc+' for '+sec+' '+cn,svc+' '+sec+' '+cn+' cost',sec+' '+cn+' '+svc+' agency'];
+  return lang==='fr'?FR:lang==='en'?EN:NL;
+}
+function update(){
+  const lang=$('s-lang').value,service=$('s-service').value,sector=$('s-sector').value,city=$('s-city').value;
+  const url=DATA.funnelBase+'/'+lang+'/'+service+'/'+sector+'/'+city;
+  $('funnelUrl').textContent=url;
+  $('openFunnel').dataset.url=url;
+  $('kwList').innerHTML=kw(lang,service,sector,city).map(k=>'<div class="kw"><span>'+k+'</span><span class="copy" data-copy="'+k.replace(/"/g,'')+'">kopieer</span></div>').join('');
+}
+$('s-lang').addEventListener('change',()=>{refreshCities();update();});
+['s-service','s-sector','s-city'].forEach(id=>$(id).addEventListener('change',update));
+$('openFunnel').addEventListener('click',()=>window.open($('openFunnel').dataset.url,'_blank','noopener'));
+document.addEventListener('click',(e)=>{const c=e.target.closest('[data-copy]');if(!c)return;const v=c.dataset.copy==='url'?$('funnelUrl').textContent:c.dataset.copy;navigator.clipboard&&navigator.clipboard.writeText(v);c.textContent='gekopieerd ✓';setTimeout(()=>c.textContent='kopieer',1200);});
+refreshCities();update();
+</script>
+</body>
+</html>

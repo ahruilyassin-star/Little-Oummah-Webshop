@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>LeadExpert — Meer klanten voor Belgische KMO's</title>
+  <meta name="description" content="LeadExpert helpt Belgische ondernemers groeien met AI-gedreven websites, leadgeneratie, Google Ads, chatbots en meer. 14 dagen gratis testen.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://leadexpert.be/">
+  <meta property="og:title" content="LeadExpert — Meer klanten voor Belgische KMO's">
+  <meta property="og:description" content="LeadExpert helpt Belgische ondernemers groeien. 14 dagen gratis testen, geen kaart nodig.">
+  <meta property="og:url" content="https://leadexpert.be/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://static.readdy.ai/image/e677540a18d5e509f693bbfd4226397a/8882e1216edfa9cfe539564f2049f395.png">
+  <meta name="theme-color" content="#080c1a">
+  <link rel="icon" href="https://static.readdy.ai/image/e677540a18d5e509f693bbfd4226397a/8882e1216edfa9cfe539564f2049f395.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"LeadExpert","url":"https://leadexpert.be","logo":"https://static.readdy.ai/image/e677540a18d5e509f693bbfd4226397a/8882e1216edfa9cfe539564f2049f395.png","email":"info@leadexpert.be","telephone":"+32456901064","address":{"@type":"PostalAddress","streetAddress":"Luxemburgstraat 20","postalCode":"9140","addressLocality":"Temse","addressCountry":"BE"},"sameAs":["https://www.facebook.com/leadexpert.be","https://www.linkedin.com/company/leadexpert"]}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --cyan:#22d3ee;--ink:#e8edf5;--ink-soft:#9fb0c5;--ink-dim:#6b7a90;
+      --card:rgba(255,255,255,.04);--card-h:rgba(255,255,255,.07);--border:rgba(148,163,184,.12);
+      --grad:linear-gradient(135deg,#5b2bff 0%,#0ea5e9 100%);--green:#22c55e;--radius:20px;--maxw:1120px;
+    }
+    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+    body{font-family:'Inter',-apple-system,system-ui,sans-serif;color:var(--ink);min-height:100vh;
+      background:#080c1a;overflow-x:hidden;line-height:1.6;cursor:none}
+    body::before{content:'';position:fixed;inset:0;z-index:-2;background:linear-gradient(145deg,#080c1a 0%,#0f172a 50%,#0d1b33 100%)}
+    body::after{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;
+      background:radial-gradient(60% 40% at 10% 0%,rgba(34,211,238,.08),transparent 70%),
+        radial-gradient(50% 50% at 90% 5%,rgba(91,43,255,.12),transparent 70%),
+        radial-gradient(70% 60% at 50% 120%,rgba(14,165,233,.07),transparent 70%)}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .cursor{position:fixed;pointer-events:none;z-index:9999;mix-blend-mode:screen}
+    .cursor-dot{position:absolute;width:8px;height:8px;background:var(--cyan);border-radius:50%;transform:translate(-50%,-50%)}
+    .cursor-ring{position:absolute;width:40px;height:40px;border:1.5px solid rgba(34,211,238,.5);border-radius:50%;transform:translate(-50%,-50%);transition:width .2s,height .2s,border-color .2s}
+    .cursor-glow{position:absolute;width:320px;height:320px;background:radial-gradient(circle,rgba(34,211,238,.06) 0%,transparent 70%);border-radius:50%;transform:translate(-50%,-50%)}
+    .reveal{opacity:0;transform:translateY(44px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
+    .reveal.visible{opacity:1;transform:none}
+    .stagger-1{transition-delay:.08s}.stagger-2{transition-delay:.16s}.stagger-3{transition-delay:.24s}
+    .stagger-4{transition-delay:.32s}.stagger-5{transition-delay:.40s}.stagger-6{transition-delay:.48s}
+    .stagger-7{transition-delay:.56s}.stagger-8{transition-delay:.64s}.stagger-9{transition-delay:.72s}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:16px max(24px,env(safe-area-inset-left));
+      display:flex;align-items:center;justify-content:space-between;transition:background .4s,backdrop-filter .4s}
+    nav.scrolled{background:rgba(8,12,26,.82);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+    .nav-brand{display:flex;align-items:center;gap:10px}
+    .nav-logo{height:32px;width:auto}
+    .nav-name{font-size:1.1rem;font-weight:800;color:#fff;letter-spacing:-.4px}
+    .nav-name b{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+    .nav-links{display:flex;align-items:center;gap:6px}
+    .nav-link{font-size:.88rem;font-weight:600;color:var(--ink-soft);padding:8px 14px;border-radius:10px;transition:color .2s,background .2s}
+    .nav-link:hover{color:#fff;background:rgba(255,255,255,.06)}
+    .nav-cta{background:var(--grad);color:#fff;padding:10px 20px;border-radius:12px;font-weight:700;font-size:.88rem;box-shadow:0 6px 22px rgba(91,43,255,.35);transition:transform .15s,box-shadow .2s}
+    .nav-cta:hover{transform:translateY(-1px);box-shadow:0 10px 30px rgba(14,165,233,.4)}
+    @media(max-width:680px){.nav-links .nav-link{display:none}}
+    .hero{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+      padding:120px 24px 80px;text-align:center;position:relative;overflow:hidden}
+    .hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(34,211,238,.08);
+      border:1px solid rgba(34,211,238,.22);color:var(--cyan);padding:8px 18px;border-radius:99px;
+      font-size:.78rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;margin-bottom:28px}
+    .hero-eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
+    @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(34,197,94,.5)}70%{box-shadow:0 0 0 8px rgba(34,197,94,0)}100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}}
+    .hero h1{font-size:clamp(2.6rem,8.5vw,6.2rem);font-weight:900;line-height:1.06;letter-spacing:-.04em;
+      color:#fff;max-width:1000px;margin-bottom:26px}
+    .word-swap{display:inline-block;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;transition:opacity .3s,transform .3s}
+    .hero-sub{font-size:clamp(1.05rem,3vw,1.3rem);color:var(--ink-soft);max-width:640px;margin-bottom:46px;line-height:1.7}
+    .hero-sub b{color:var(--ink)}
+    .hero-ctas{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-bottom:60px}
+    .btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--grad);color:#fff;
+      padding:18px 34px;border-radius:14px;font-weight:800;font-size:1.05rem;
+      box-shadow:0 12px 40px rgba(91,43,255,.4);transition:transform .15s,box-shadow .2s;white-space:nowrap;border:none;font-family:inherit;cursor:pointer}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 50px rgba(14,165,233,.45)}
+    .btn-ghost{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.05);
+      border:1px solid var(--border);color:#fff;padding:18px 30px;border-radius:14px;
+      font-weight:700;font-size:1.05rem;transition:background .2s}
+    .btn-ghost:hover{background:rgba(255,255,255,.1)}
+    .hero-proof{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:20px;color:var(--ink-soft);font-size:.88rem}
+    .hero-proof .stars{color:#fbbf24;font-size:1rem;letter-spacing:2px}
+    .hero-proof strong{color:#fff}
+    .hero-proof-sep{width:1px;height:20px;background:var(--border)}
+    .scroll-hint{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--ink-dim);font-size:.75rem;animation:bob 2s ease-in-out infinite}
+    @keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
+    .container{max-width:var(--maxw);margin:0 auto;width:100%;padding:0 24px}
+    .section{padding:100px 0}
+    .section-label{font-size:.72rem;font-weight:800;letter-spacing:1.8px;text-transform:uppercase;color:var(--cyan);margin-bottom:14px}
+    .section-title{font-size:clamp(1.9rem,5vw,3.2rem);font-weight:900;letter-spacing:-.03em;color:#fff;line-height:1.15;margin-bottom:16px}
+    .section-sub{color:var(--ink-soft);font-size:1.05rem;max-width:580px;line-height:1.7}
+    .stats-band{background:rgba(255,255,255,.03);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:60px 0}
+    .stats-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:40px 24px;max-width:var(--maxw);margin:0 auto;padding:0 24px}
+    @media(min-width:640px){.stats-grid{grid-template-columns:repeat(4,1fr)}}
+    .stat-item{text-align:center}
+    .stat-number{font-size:clamp(2.4rem,6vw,3.8rem);font-weight:900;letter-spacing:-.04em;background:var(--grad);
+      -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;line-height:1.1}
+    .stat-label{color:var(--ink-soft);font-size:.88rem;margin-top:6px}
+    .services-grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:48px}
+    @media(min-width:560px){.services-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(min-width:900px){.services-grid{grid-template-columns:repeat(3,1fr)}}
+    .service-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+      padding:28px 24px;transition:background .25s,border-color .25s,transform .25s;
+      display:flex;flex-direction:column;gap:12px}
+    .service-card:hover{background:var(--card-h);border-color:rgba(34,211,238,.25);transform:translateY(-3px)}
+    .svc-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;color:#fff}
+    .svc-name{font-size:1.1rem;font-weight:800;color:#fff}
+    .svc-promise{color:var(--ink-soft);font-size:.92rem;line-height:1.55}
+    .svc-arrow{margin-top:auto;padding-top:14px;color:var(--cyan);font-size:.84rem;font-weight:700;display:flex;align-items:center;gap:6px;
+      opacity:0;transform:translateX(-6px);transition:opacity .2s,transform .2s}
+    .service-card:hover .svc-arrow{opacity:1;transform:none}
+    .how-steps{display:grid;gap:0;margin-top:56px}
+    @media(min-width:760px){.how-steps{grid-template-columns:repeat(3,1fr);gap:32px}}
+    .how-step{padding:36px 28px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius)}
+    @media(max-width:759px){.how-step:not(:last-child){border-bottom:none;border-radius:var(--radius) var(--radius) 0 0}}
+    @media(max-width:759px){.how-step:not(:first-child):not(:last-child){border-radius:0}}
+    @media(max-width:759px){.how-step:last-child{border-radius:0 0 var(--radius) var(--radius)}}
+    @media(min-width:760px){.how-steps{position:relative}.how-steps::before{content:'';position:absolute;top:56px;left:calc(33.33% + 14px);right:calc(33.33% + 14px);height:1px;background:linear-gradient(90deg,var(--cyan),#818cf8);opacity:.35;z-index:1}}
+    .how-nr{font-size:4rem;font-weight:900;letter-spacing:-.04em;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;line-height:1;margin-bottom:16px}
+    .how-title{font-size:1.2rem;font-weight:800;color:#fff;margin-bottom:8px}
+    .how-body{color:var(--ink-soft);font-size:.94rem;line-height:1.6}
+    .testimonials-grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:48px}
+    @media(min-width:700px){.testimonials-grid{grid-template-columns:repeat(3,1fr)}}
+    .testimonial{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:28px 24px}
+    .test-stars{color:#fbbf24;font-size:.95rem;letter-spacing:3px;margin-bottom:14px}
+    .test-text{color:var(--ink);font-size:.97rem;line-height:1.65;margin-bottom:20px}
+    .test-author{display:flex;align-items:center;gap:12px}
+    .test-avatar{width:44px;height:44px;border-radius:50%;background:var(--grad);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.92rem;flex-shrink:0}
+    .test-name{font-weight:700;color:#fff;font-size:.92rem}
+    .test-badge{color:#4ade80;font-size:.76rem}
+    .cta-section{padding:100px 0;text-align:center}
+    .cta-card{background:linear-gradient(135deg,rgba(91,43,255,.22),rgba(14,165,233,.15));border:1px solid rgba(34,211,238,.2);
+      border-radius:28px;padding:70px 32px;max-width:760px;margin:0 auto;backdrop-filter:blur(8px);
+      box-shadow:0 30px 80px rgba(0,0,0,.35)}
+    .cta-days{font-size:clamp(3.5rem,12vw,7rem);font-weight:900;letter-spacing:-.06em;line-height:1;
+      background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:8px}
+    .cta-label{font-size:1.05rem;color:var(--ink-soft);margin-bottom:30px}
+    .cta-note{margin-top:20px;color:var(--ink-dim);font-size:.85rem}
+    footer{padding:60px 0 40px;border-top:1px solid var(--border)}
+    .foot-inner{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+    .foot-top{display:grid;grid-template-columns:1fr;gap:36px;margin-bottom:40px}
+    @media(min-width:640px){.foot-top{grid-template-columns:1.8fr 1fr}}
+    .foot-logo-row{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+    .foot-logo-img{height:32px;width:auto}
+    .foot-tagline{color:var(--ink-soft);font-size:.9rem;max-width:380px;margin-bottom:20px;line-height:1.65}
+    .foot-badges{display:flex;flex-wrap:wrap;gap:8px}
+    .foot-badge{padding:5px 12px;border-radius:99px;background:rgba(34,211,238,.07);border:1px solid rgba(34,211,238,.18);color:#67e8f9;font-size:.73rem;font-weight:700}
+    .foot-contact{font-size:.9rem;color:var(--ink-soft);line-height:2}
+    .foot-contact strong{color:#fff;display:block;margin-bottom:4px}
+    .foot-social{display:flex;gap:8px;margin-top:16px}
+    .foot-social a{width:40px;height:40px;border-radius:10px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:.82rem;font-weight:800;color:var(--ink-soft);transition:background .2s,color .2s}
+    .foot-social a:hover{background:rgba(34,211,238,.12);color:var(--cyan);border-color:rgba(34,211,238,.3)}
+    .foot-bottom{border-top:1px solid var(--border);padding-top:20px;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;font-size:.8rem;color:var(--ink-dim)}
+    .foot-bottom a:hover{color:var(--cyan)}
+    @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+<div class="cursor" id="cursor"><div class="cursor-glow"></div><div class="cursor-ring"></div><div class="cursor-dot"></div></div>
+<nav id="mainNav">
+  <div class="nav-brand">
+    <img src="https://static.readdy.ai/image/e677540a18d5e509f693bbfd4226397a/8882e1216edfa9cfe539564f2049f395.png" alt="LeadExpert" class="nav-logo" onerror="this.style.display='none'">
+    <span class="nav-name">Lead<b>Expert</b></span>
+  </div>
+  <div class="nav-links">
+    <a href="#services" class="nav-link">Services</a>
+    <a href="#hoe" class="nav-link">Hoe het werkt</a>
+    <a href="/nieuws" class="nav-link">📰 Nieuws</a>
+    <a href="#contact" class="nav-cta">Gratis starten</a>
+  </div>
+</nav>
+<section class="hero">
+  <div class="hero-eyebrow"><span class="dot"></span> AI-gedreven groei voor KMO's</div>
+  <h1>Meer <span class="word-swap" id="wordSwap">leads</span><br>voor jouw bedrijf</h1>
+  <p class="hero-sub"><b>LeadExpert</b> bouwt je digitale groeimachine — van website tot AI-agent.<br>Test 14 dagen gratis. Geen kaart, geen verplichting.</p>
+  <div class="hero-ctas">
+    <a href="#contact" class="btn-primary">Start 14 dagen gratis <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a href="#services" class="btn-ghost">Ontdek de services</a>
+  </div>
+  <div class="hero-proof">
+    <span class="stars">★★★★★</span><strong>4.9/5</strong><span>op 47+ beoordelingen</span>
+    <span class="hero-proof-sep"></span><span>Geen kaart nodig</span>
+    <span class="hero-proof-sep"></span><span>Gevestigd in België</span>
+  </div>
+  <div class="scroll-hint"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg></div>
+</section>
+<div class="stats-band">
+  <div class="stats-grid">
+    <div class="stat-item reveal stagger-1"><div class="stat-number" data-target="3276" data-suffix="+">0+</div><div class="stat-label">Landingspagina's gegenereerd</div></div><div class="stat-item reveal stagger-2"><div class="stat-number" data-target="14" data-suffix=" dagen">0 dagen</div><div class="stat-label">Gratis testen, geen kaart</div></div><div class="stat-item reveal stagger-3"><div class="stat-number" data-target="4.9" data-suffix="/5">0/5</div><div class="stat-label">Gemiddelde beoordeling</div></div><div class="stat-item reveal stagger-4"><div class="stat-number" data-target="47" data-suffix="+">0+</div><div class="stat-label">Ondernemers actief</div></div>
+  </div>
+</div>
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-label reveal">Wat we doen</div>
+    <h2 class="section-title reveal">9 manieren om te groeien</h2>
+    <p class="section-sub reveal">Van een conversiegerichte website tot een AI-agent die voor je werkt — alles getest in 14 dagen, volledig vrijblijvend.</p>
+    <div class="services-grid">
+      <a href="/nl/website/aannemer/antwerpen/" class="service-card reveal stagger-1"><div class="svc-icon" style="background:#06b6d422"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#06b6d4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg></div><div class="svc-name">Website</div><div class="svc-promise">Een website die klanten oplevert</div><div class="svc-arrow">Meer weten <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div></a><a href="/nl/leads/aannemer/antwerpen/" class="service-card reveal stagger-2"><div class="svc-icon" style="background:#f9731622"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#f97316" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><div class="svc-name">Leadgeneratie</div><div class="svc-promise">Een stroom van nieuwe aanvragen</div><div class="svc-arrow">Meer weten <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div></a><a href="/nl/webshop/aannemer/antwerpen/" class="service-card reveal stagger-3"><div class="svc-icon" style="background:#22c55e22"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#22c55e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 01-8 0"/></svg></div><div class="svc-name">Webshop</div><div class="svc-promise">Online verkopen, dag en nacht</div><div class="svc-arrow">Meer weten <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div></a><a href="/nl/whatsapp-automatisatie/aannemer/antwerpen/" class="service-card reveal stagger-4"><div class="svc-icon" style="background:#25d36622"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#25d366" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div><div class="svc-name">WhatsApp-automatisatie</div><div class="svc-promise">Antwoord klanten automatisch, 24/7</div><div class="svc-arrow">Meer weten <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div></a><a href="/nl/ai-agent/aannemer/antwerpen/" class="service-card reveal stagger-5"><div class="svc-icon" style="background:#8b5cf622"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#8b5cf6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M12 2v4M8 7l-2-2M16 7l2-2M9 15h.01M15 15h.01M9 11h6"/></svg></div><div class="svc-name">AI-agent</div><div class="svc-promise">Een digitale medewerker die nooit slaapt</div><div class="svc-arrow">Meer weten <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div></a><a href="/nl/chatbot/aannemer/antwerpen/" class="service-card reveal stagger-6"><div class="svc-icon" style="background:#3b82f622"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#3b82f6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 3 1 4.29L2 22l5.71-1C8.99 21.63 10.46 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 12h.01M12 12h.01M16 12h.01"/></svg></div><div class="svc-name">Chatbot</div><div class="svc-promise">Zet bezoekers om in klanten, automatisch</div><div class="svc-arrow">Meer weten <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div></a><a href="/nl/lokale-seo/aannemer/antwerpen/" class="service-card reveal stagger-1"><div class="svc-icon" style="background:#ef444422"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#ef4444" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v3l2 2"/></svg></div><div class="svc-name">Lokale SEO</div><div class="svc-promise">Bovenaan in Google in [stad]</div><div class="svc-arrow">Meer weten <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div></a><a href="/nl/google-ads/aannemer/antwerpen/" class="service-card reveal stagger-2"><div class="svc-icon" style="background:#ea433522"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#ea4335" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div><div class="svc-name">Google Ads</div><div class="svc-promise">Direct bovenaan Google, vanaf dag één</div><div class="svc-arrow">Meer weten <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div></a><a href="/nl/email-marketing/aannemer/antwerpen/" class="service-card reveal stagger-3"><div class="svc-icon" style="background:#ec489922"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#ec4899" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg></div><div class="svc-name">E-mailmarketing</div><div class="svc-promise">Verander eenmalige klanten in vaste klanten</div><div class="svc-arrow">Meer weten <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div></a>
+    </div>
+  </div>
+</section>
+<section class="section" id="hoe" style="background:rgba(8,12,26,.5);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+  <div class="container">
+    <div class="section-label reveal">Hoe het werkt</div>
+    <h2 class="section-title reveal">Van gesprek tot resultaat</h2>
+    <div class="how-steps">
+      <div class="how-step reveal stagger-1"><div class="how-nr">01</div><div class="how-title">Gratis intake (30 min)</div><div class="how-body">We bekijken je situatie en doel. Jij hoeft niets voor te bereiden — wij stellen de vragen.</div></div>
+      <div class="how-step reveal stagger-2"><div class="how-nr">02</div><div class="how-title">14 dagen gratis testen</div><div class="how-body">Wij zetten alles op. Jij test het risicovrij — geen kaart nodig, geen verplichtingen.</div></div>
+      <div class="how-step reveal stagger-3"><div class="how-nr">03</div><div class="how-title">Live &amp; leads ontvangen</div><div class="how-body">Tevreden? We zetten het definitief live. Aanvragen komen direct bij jou binnen.</div></div>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="section-label reveal">Resultaten</div>
+    <h2 class="section-title reveal">47+ ondernemers gingen je voor</h2>
+    <p class="section-sub reveal">Echte resultaten van ondernemers die kozen voor groei.</p>
+    <div class="testimonials-grid">
+      <div class="testimonial reveal stagger-1"><div class="test-stars">★★★★★</div><p class="test-text">"Binnen een week live. De eerste aanvraag kwam al tijdens de gratis periode binnen."</p><div class="test-author"><div class="test-avatar">TV</div><div><div class="test-name">Tom V.</div><div class="test-badge">✓ Geverifieerde klant</div></div></div></div>
+      <div class="testimonial reveal stagger-2"><div class="test-stars">★★★★★</div><p class="test-text">"Duidelijke prijs, geen verrassingen. We worden nu gevonden in Antwerpen voor onze belangrijkste zoekwoorden."</p><div class="test-author"><div class="test-avatar">SD</div><div><div class="test-name">Sofie D.</div><div class="test-badge">✓ Geverifieerde klant</div></div></div></div>
+      <div class="testimonial reveal stagger-3"><div class="test-stars">★★★★★</div><p class="test-text">"Professioneel resultaat in korte tijd. Een aanrader voor elke ondernemer die serieus wil groeien."</p><div class="test-author"><div class="test-avatar">KB</div><div><div class="test-name">Karim B.</div><div class="test-badge">✓ Geverifieerde klant</div></div></div></div>
+    </div>
+  </div>
+</section>
+<section class="cta-section" id="contact">
+  <div class="container">
+    <div class="cta-card reveal">
+      <div class="section-label" style="margin-bottom:16px">Gratis proefperiode</div>
+      <div class="cta-days">14</div>
+      <p class="cta-label">dagen volledig gratis testen</p>
+      <a href="mailto:info@leadexpert.be?subject=Gratis%20proefperiode%20aanvragen" class="btn-primary" style="margin:0 auto">Start mijn gratis proefperiode <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <p class="cta-note">Of WhatsApp naar <a href="https://wa.me/32456901064" style="color:var(--cyan)">+32 456 90 10 64</a> &middot; Geen kaart nodig</p>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="foot-inner">
+    <div class="foot-top">
+      <div>
+        <div class="foot-logo-row"><img src="https://static.readdy.ai/image/e677540a18d5e509f693bbfd4226397a/dcbf18580c230dc8f15d98c529a2724b.png" alt="LeadExpert" class="foot-logo-img" onerror="this.style.display='none'"><span class="nav-name">Lead<b>Expert</b></span></div>
+        <p class="foot-tagline">LeadExpert.be — AI Agent Specialist voor Vlaamse KMO's · Gevestigd in België (Temse) · AVG &amp; EU AI Act conform.</p>
+        <div class="foot-badges"><span class="foot-badge">Lokaal verankerd in België</span><span class="foot-badge">B2B-expert voor KMO's</span><span class="foot-badge">AVG/GDPR-conform</span></div>
+        <div class="foot-social">
+          <a href="https://wa.me/32456901064" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+          <a href="https://www.facebook.com/leadexpert.be" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+          <a href="https://www.linkedin.com/company/leadexpert" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+      <div class="foot-contact">
+        <strong>LeadExpert</strong>
+        Luxemburgstraat 20<br>9140 Temse, België<br>
+        BTW: BE1032.099.301<br>
+        <a href="tel:+32456901064">+32 456 90 10 64</a><br>
+        <a href="mailto:info@leadexpert.be">info@leadexpert.be</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 LeadExpert &middot; Alle rechten voorbehouden &middot; <a href="/privacy">Privacy</a> &middot; <a href="/nieuws">Belgisch Nieuws</a></span>
+      <span style="color:var(--cyan);font-weight:700">U test eerst, u betaalt daarna.</span>
+    </div>
+  </div>
+</footer>
+<a href="https://wa.me/32456901064" target="_blank" rel="noopener" aria-label="WhatsApp" style="position:fixed;bottom:24px;right:24px;z-index:60;background:#25d366;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px rgba(37,211,102,.45)"><svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a>
+<script>
+(function(){
+  var cur=document.getElementById('cursor');
+  if(!cur||window.matchMedia('(pointer:coarse)').matches){if(cur)cur.style.display='none';document.body.style.cursor='auto';return;}
+  var dot=cur.querySelector('.cursor-dot'),ring=cur.querySelector('.cursor-ring'),glow=cur.querySelector('.cursor-glow');
+  var mx=0,my=0,rx=0,ry=0,gx=0,gy=0;
+  document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;});
+  function tick(){
+    dot.style.left=mx+'px';dot.style.top=my+'px';
+    rx+=(mx-rx)*.18;ry+=(my-ry)*.18;
+    ring.style.left=rx+'px';ring.style.top=ry+'px';
+    gx+=(mx-gx)*.07;gy+=(my-gy)*.07;
+    glow.style.left=gx+'px';glow.style.top=gy+'px';
+    requestAnimationFrame(tick);
+  }
+  tick();
+  document.querySelectorAll('a,button').forEach(function(el){
+    el.addEventListener('mouseenter',function(){ring.style.width='56px';ring.style.height='56px';ring.style.borderColor='rgba(34,211,238,.9)';});
+    el.addEventListener('mouseleave',function(){ring.style.width='40px';ring.style.height='40px';ring.style.borderColor='rgba(34,211,238,.5)';});
+  });
+})();
+(function(){
+  var nav=document.getElementById('mainNav');
+  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>60);},{passive:true});
+})();
+(function(){
+  var el=document.getElementById('wordSwap');
+  if(!el)return;
+  var words=["leads","klanten","omzet","groei","resultaat"];
+  var i=0;
+  setInterval(function(){
+    el.style.opacity='0';el.style.transform='translateY(10px)';
+    setTimeout(function(){i=(i+1)%words.length;el.textContent=words[i];el.style.opacity='1';el.style.transform='none';},280);
+  },2200);
+})();
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(!els.length)return;
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});
+  },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(el){io.observe(el);});
+})();
+(function(){
+  var nums=document.querySelectorAll('.stat-number[data-target]');
+  if(!nums.length)return;
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(!e.isIntersecting)return;
+      io.unobserve(e.target);
+      var el=e.target,target=parseFloat(el.dataset.target),suffix=el.dataset.suffix||'',isFloat=target%1!==0;
+      var start=performance.now(),dur=1600;
+      function step(now){var t=Math.min((now-start)/dur,1),val=t<1?target*t*t*(3-2*t):target;el.textContent=(isFloat?val.toFixed(1):Math.round(val))+suffix;if(t<1)requestAnimationFrame(step);}
+      requestAnimationFrame(step);
+    });
+  },{threshold:.5});
+  nums.forEach(function(el){io.observe(el);});
+})();
+</script>
+</body>
+</html>

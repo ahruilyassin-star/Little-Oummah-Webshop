@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Promote Cockpit — LeadExpert</title>
+<meta name="robots" content="noindex">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#05080f;--cyan:#06b6d4;--cyan-d:#0891b2;--violet:#8b5cf6;--gray:#64748b;--border:#e2e8f0;--bg:#f8fafc;--green:#22c55e}
+body{font-family:'Inter','Segoe UI',system-ui,sans-serif;background:var(--bg);color:#0f172a;line-height:1.6}
+a{text-decoration:none;color:inherit}
+header{background:linear-gradient(135deg,#05080f,#3b0764 55%,#8b5cf6);color:#fff;padding:2.5rem 1.5rem 3rem}
+.wrap{max-width:1100px;margin:0 auto;padding:0 1.25rem}
+.htop{display:flex;align-items:center;gap:.7rem;margin-bottom:1.1rem}
+.hlogo{width:42px;height:42px;background:#fff;border-radius:11px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.4rem;color:#8b5cf6}
+.hbrand{font-weight:800;font-size:1.05rem}.hbrand small{display:block;font-weight:400;opacity:.6;font-size:.75rem}
+header h1{font-size:clamp(1.6rem,4vw,2.3rem);font-weight:800;margin-bottom:.5rem}
+header p{opacity:.85;max-width:680px}
+.nav{display:flex;gap:.5rem;margin-top:1.3rem;flex-wrap:wrap}
+.nav a{background:rgba(255,255,255,.12);color:#fff;padding:.45rem .9rem;border-radius:99px;font-size:.82rem;font-weight:600}
+.nav a:hover{background:rgba(255,255,255,.22)}
+.stats{display:flex;flex-wrap:wrap;gap:1.6rem;margin-top:1.5rem}
+.stat strong{display:block;font-size:1.7rem;font-weight:800}.stat span{font-size:.78rem;opacity:.7}
+.content{max-width:1100px;margin:0 auto;padding:2rem 1.25rem 4rem}
+.slabel{font-size:.72rem;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:.1em;margin:2.5rem 0 1rem;display:flex;align-items:center;gap:.5rem}
+.slabel:first-child{margin-top:0}
+.slabel::after{content:'';flex:1;height:1px;background:var(--border)}
+.promo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:1rem}
+.promo-card{background:#fff;border:1px solid var(--border);border-top:4px solid var(--c,#8b5cf6);border-radius:12px;padding:1rem 1.1rem;display:flex;flex-direction:column;gap:.35rem}
+.promo-top{display:flex;justify-content:space-between;align-items:center}
+.promo-icon{font-size:1.5rem}.promo-lang{font-size:.72rem;font-weight:700;color:var(--gray)}
+.promo-svc{font-weight:800;font-size:.95rem;line-height:1.25}
+.promo-city{font-size:.82rem;color:#475569}
+.promo-actions{display:flex;gap:.5rem;margin-top:.6rem}
+.mini{font-family:inherit;font-size:.78rem;font-weight:700;padding:.45rem .7rem;border-radius:7px;border:none;cursor:pointer;background:var(--violet);color:#fff;flex:1;text-align:center}
+.mini.ghost{background:#fff;border:1.5px solid var(--border);color:#475569}
+.mini:hover{filter:brightness(1.05)}
+.panel{background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.4rem}
+.row{display:flex;flex-wrap:wrap;gap:.7rem;margin-bottom:1rem}
+.field{flex:1;min-width:150px;display:flex;flex-direction:column;gap:.3rem}
+.field label{font-size:.75rem;font-weight:700;color:var(--gray)}
+.field select{font-family:inherit;font-size:.92rem;padding:.55rem;border:1.5px solid #cbd5e1;border-radius:8px;background:#fff}
+.tabs{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:.9rem}
+.tab{font-size:.8rem;font-weight:700;padding:.45rem .85rem;border-radius:99px;border:1.5px solid var(--border);background:#fff;color:#475569;cursor:pointer}
+.tab.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.post{position:relative;background:#0f172a;color:#e2e8f0;border-radius:10px;padding:1rem 1.1rem;font-size:.9rem;white-space:pre-wrap;line-height:1.55;min-height:120px}
+.post .copy{position:absolute;top:.6rem;right:.6rem;background:var(--cyan);color:#04212a;font-weight:700;border:none;border-radius:7px;padding:.35rem .7rem;font-size:.74rem;cursor:pointer;font-family:inherit}
+.post-meta{display:flex;justify-content:space-between;align-items:center;margin-top:.5rem;font-size:.76rem;color:var(--gray)}
+.checklist{background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden}
+.cl-head{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.2rem;border-bottom:1px solid var(--border);background:#fafafa}
+.cl-head b{font-size:.95rem}.cl-date{font-size:.78rem;color:var(--gray)}
+.progress{height:8px;background:var(--border);border-radius:99px;overflow:hidden}
+.bar{height:100%;width:0;background:linear-gradient(90deg,var(--violet),var(--cyan));transition:width .3s}
+.task{display:flex;gap:.8rem;padding:.85rem 1.2rem;border-bottom:1px solid var(--border);cursor:pointer;align-items:flex-start}
+.task:last-child{border-bottom:none}
+.task:hover{background:#fafafa}
+.check{flex-shrink:0;width:22px;height:22px;border:2px solid #cbd5e1;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:.8rem;color:#fff;transition:.15s;margin-top:.1rem}
+.task.done .check{background:var(--green);border-color:var(--green)}
+.task.done .t-title{text-decoration:line-through;color:var(--gray)}
+.t-title{font-weight:700;font-size:.92rem}.t-desc{font-size:.82rem;color:#475569}
+.chan-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem}
+.chan{background:#fff;border:1px solid var(--border);border-radius:12px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.4rem}
+.chan h3{font-size:.95rem;display:flex;align-items:center;gap:.4rem}
+.chan p{font-size:.83rem;color:#475569;flex:1}
+.chan a.go{font-size:.82rem;font-weight:700;color:var(--cyan-d)}
+.note{font-size:.8rem;color:var(--gray);margin-top:.7rem}
+.reset{background:none;border:none;color:var(--cyan-d);font-weight:700;font-size:.78rem;cursor:pointer;font-family:inherit}
+footer{text-align:center;padding:2rem;font-size:.8rem;color:var(--gray)}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="htop">
+      <div class="hlogo">L</div>
+      <div class="hbrand">LeadExpert Promote Cockpit<small>leadexpert.be/promote</small></div>
+    </div>
+    <h1>Maak elke dag je pagina's én leadexpert.be bekend</h1>
+    <p>Eén commandopost voor distributie. Vandaag te promoten pagina's, kant-en-klare posts per platform, een dagchecklist die je voortgang onthoudt, en de kanalen die je merk groot maken.</p>
+    <div class="nav">
+      <a href="#vandaag">🚀 Vandaag promoten</a>
+      <a href="#posts">✍️ Post-generator</a>
+      <a href="#checklist">✅ Dagchecklist</a>
+      <a href="#kanalen">📣 Kanalen</a>
+      <a href="#indexering">🔎 Indexering</a>
+      <a href="/growth">🏗️ Growth (bouwen)</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><strong>3.276</strong><span>pagina's om te promoten</span></div>
+      <div class="stat"><strong>7</strong><span>acties per dag</span></div>
+      <div class="stat"><strong>2.555</strong><span>distributie-acties/jaar</span></div>
+      <div class="stat"><strong>8</strong><span>bekendheidskanalen</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="content">
+
+  <div class="slabel" id="vandaag">🚀 Vandaag promoten — jouw dagselectie</div>
+  <div class="promo-grid"><div class="promo-card" style="--c:#06b6d4" data-i="0"
+        data-lang="fr" data-service="website" data-sector="tuinaannemer" data-city="paris">
+      <div class="promo-top"><span class="promo-icon">🌐</span><span class="promo-lang">🇫🇷 FR</span></div>
+      <div class="promo-svc">Site web · paysagiste</div>
+      <div class="promo-city">Paris</div>
+      <div class="promo-actions">
+        <button class="mini gen" data-i="0">✍️ Posts</button>
+        <a class="mini ghost" href="https://leadexpert.be/fr/website/tuinaannemer/paris/" target="_blank" rel="noopener">↗ Open</a>
+      </div>
+    </div><div class="promo-card" style="--c:#25d366" data-i="1"
+        data-lang="nl" data-service="whatsapp-automatisatie" data-sector="boekhouder" data-city="rotterdam">
+      <div class="promo-top"><span class="promo-icon">💬</span><span class="promo-lang">🇳🇱 NL</span></div>
+      <div class="promo-svc">WhatsApp-automatisatie · boekhouder</div>
+      <div class="promo-city">Rotterdam</div>
+      <div class="promo-actions">
+        <button class="mini gen" data-i="1">✍️ Posts</button>
+        <a class="mini ghost" href="https://leadexpert.be/nl/whatsapp-automatisatie/boekhouder/rotterdam/" target="_blank" rel="noopener">↗ Open</a>
+      </div>
+    </div><div class="promo-card" style="--c:#ea4335" data-i="2"
+        data-lang="en" data-service="google-ads" data-sector="tuinaannemer" data-city="toronto">
+      <div class="promo-top"><span class="promo-icon">📈</span><span class="promo-lang">🇬🇧 EN</span></div>
+      <div class="promo-svc">Google Ads · landscaper</div>
+      <div class="promo-city">Toronto</div>
+      <div class="promo-actions">
+        <button class="mini gen" data-i="2">✍️ Posts</button>
+        <a class="mini ghost" href="https://leadexpert.be/en/google-ads/tuinaannemer/toronto/" target="_blank" rel="noopener">↗ Open</a>
+      </div>
+    </div><div class="promo-card" style="--c:#8b5cf6" data-i="3"
+        data-lang="en" data-service="ai-agent" data-sector="loodgieter" data-city="amsterdam">
+      <div class="promo-top"><span class="promo-icon">🤖</span><span class="promo-lang">🇬🇧 EN</span></div>
+      <div class="promo-svc">AI agent · plumber</div>
+      <div class="promo-city">Amsterdam</div>
+      <div class="promo-actions">
+        <button class="mini gen" data-i="3">✍️ Posts</button>
+        <a class="mini ghost" href="https://leadexpert.be/en/ai-agent/loodgieter/amsterdam/" target="_blank" rel="noopener">↗ Open</a>
+      </div>
+    </div><div class="promo-card" style="--c:#8b5cf6" data-i="4"
+        data-lang="en" data-service="ai-agent" data-sector="aannemer" data-city="dubai">
+      <div class="promo-top"><span class="promo-icon">🤖</span><span class="promo-lang">🇬🇧 EN</span></div>
+      <div class="promo-svc">AI agent · contractor</div>
+      <div class="promo-city">Dubai</div>
+      <div class="promo-actions">
+        <button class="mini gen" data-i="4">✍️ Posts</button>
+        <a class="mini ghost" href="https://leadexpert.be/en/ai-agent/aannemer/dubai/" target="_blank" rel="noopener">↗ Open</a>
+      </div>
+    </div></div>
+  <p class="note">Deze selectie ververst elke dag automatisch. Klik op <b>✍️ Posts</b> om kant-en-klare teksten te genereren, kopieer en plaats ze. Roteer zo elke dag andere pagina's de schijnwerpers in.</p>
+
+  <div class="slabel" id="posts">✍️ Post-generator — kies & kopieer</div>
+  <div class="panel">
+    <div class="row">
+      <div class="field"><label>Taal</label><select id="s-lang"></select></div>
+      <div class="field"><label>Dienst</label><select id="s-service"></select></div>
+      <div class="field"><label>Sector</label><select id="s-sector"></select></div>
+      <div class="field"><label>Stad / markt</label><select id="s-city"></select></div>
+    </div>
+    <div class="tabs" id="tabs">
+      <button class="tab on" data-p="linkedin">in LinkedIn</button>
+      <button class="tab" data-p="facebook">f Facebook</button>
+      <button class="tab" data-p="instagram">◎ Instagram</button>
+      <button class="tab" data-p="x">𝕏 Post</button>
+      <button class="tab" data-p="whatsapp">✆ WhatsApp</button>
+      <button class="tab" data-p="gbp">📍 Google-post</button>
+    </div>
+    <div class="post"><button class="copy" id="copyPost">kopieer ⧉</button><span id="postText"></span></div>
+    <div class="post-meta"><span id="postUrl"></span><span id="postLen"></span></div>
+  </div>
+
+  <div class="slabel" id="checklist">✅ Dagchecklist — vink af wat je deed</div>
+  <div class="checklist">
+    <div class="cl-head">
+      <div><b>Vandaag</b> <span class="cl-date" id="clDate"></span></div>
+      <div style="display:flex;gap:1rem;align-items:center"><span id="clCount" style="font-weight:700;font-size:.85rem"></span><button class="reset" id="clReset">reset</button></div>
+    </div>
+    <div style="padding:0 1.2rem;margin:.8rem 0"><div class="progress"><div class="bar" id="clBar"></div></div></div>
+    <div id="taskList">
+      <div class="task" data-task="0"><div class="check">✓</div><div><div class="t-title">LinkedIn-post</div><div class="t-desc">Plaats vandaag één funnel op je LinkedIn-bedrijfspagina. Gebruik de kant-en-klare tekst hieronder.</div></div></div><div class="task" data-task="1"><div class="check">✓</div><div><div class="t-title">Facebook-pagina</div><div class="t-desc">Deel dezelfde funnel op je Facebook-pagina + in één relevante lokale groep.</div></div></div><div class="task" data-task="2"><div class="check">✓</div><div><div class="t-title">Instagram</div><div class="t-desc">Post of story met de funnel-link in bio of als sticker. Pak de Instagram-variant hieronder.</div></div></div><div class="task" data-task="3"><div class="check">✓</div><div><div class="t-title">WhatsApp / community</div><div class="t-desc">Deel in één WhatsApp-groep, Slack of community waar je doelgroep zit.</div></div></div><div class="task" data-task="4"><div class="check">✓</div><div><div class="t-title">Google Bedrijfsprofiel</div><div class="t-desc">Plaats een korte update-post op je Google Business Profile met de funnel-link.</div></div></div><div class="task" data-task="5"><div class="check">✓</div><div><div class="t-title">1 backlink / vermelding</div><div class="t-desc">Voeg leadexpert.be toe aan één nieuwe directory of vraag één partner om een link.</div></div></div><div class="task" data-task="6"><div class="check">✓</div><div><div class="t-title">Reageer &amp; connect</div><div class="t-desc">Reageer waardevol op 3 posts van je doelgroep. Zichtbaarheid = vertrouwen.</div></div></div>
+    </div>
+  </div>
+  <p class="note">Je voortgang wordt lokaal in je browser bewaard en reset automatisch elke nieuwe dag. 7 acties × elke dag = consistente groei.</p>
+
+  <div class="slabel" id="kanalen">📣 Maak leadexpert.be bekend — kanalen</div>
+  <div class="chan-grid">
+    <div class="chan"><h3>📣 Google Bedrijfsprofiel</h3><p>De #1 bron van lokale klanten. Compleet profiel + wekelijkse posts + reviews verzamelen.</p><a class="go" href="https://business.google.com/" target="_blank" rel="noopener">Openen ↗</a></div><div class="chan"><h3>📣 Bing Places</h3><p>Gratis lokale vermelding bij Bing — minder concurrentie, extra bereik.</p><a class="go" href="https://www.bingplaces.com/" target="_blank" rel="noopener">Openen ↗</a></div><div class="chan"><h3>📣 Trustpilot</h3><p>Verzamel echte reviews. Sterren bouwen vertrouwen en verhogen je clicks.</p><a class="go" href="https://business.trustpilot.com/" target="_blank" rel="noopener">Openen ↗</a></div><div class="chan"><h3>📣 LinkedIn-bedrijfspagina</h3><p>Post 3–5×/week. B2B-beslissers leven hier. Deel funnels + cases + tips.</p><a class="go" href="https://www.linkedin.com/company/leadexpert" target="_blank" rel="noopener">Openen ↗</a></div><div class="chan"><h3>📣 Facebook-bedrijfspagina</h3><p>Lokaal bereik + groepen. Deel funnels en speel in op lokale vragen.</p><a class="go" href="https://www.facebook.com/leadexpert.be" target="_blank" rel="noopener">Openen ↗</a></div><div class="chan"><h3>📣 Gouden Gids / Goudengids.be</h3><p>Klassieke BE-bedrijvengids — vertrouwde backlink + vindbaarheid.</p><a class="go" href="https://www.goudengids.be/" target="_blank" rel="noopener">Openen ↗</a></div><div class="chan"><h3>📣 Infobel</h3><p>Belgische bedrijvendatabank — gratis vermelding, sterke lokale backlink.</p><a class="go" href="https://www.infobel.com/nl/belgium" target="_blank" rel="noopener">Openen ↗</a></div><div class="chan"><h3>📣 Trustlocal / lokale directories</h3><p>Verzamel NAP-consistente vermeldingen (naam, adres, telefoon) voor lokale SEO.</p><a class="go" href="https://www.google.com/search?q=gratis+bedrijf+toevoegen+directory+belgi%C3%AB" target="_blank" rel="noopener">Openen ↗</a></div>
+  </div>
+
+  <div class="slabel" id="indexering">🔎 Indexering — laat Google alles vinden</div>
+  <div class="chan-grid">
+    <div class="chan"><h3>🔎 Google Search Console</h3><p>Voeg leadexpert.be toe en dien de sitemap in. Daarna kan je elke nieuwe URL handmatig laten indexeren.</p><a class="go" href="https://search.google.com/search-console" target="_blank" rel="noopener">Openen ↗</a></div><div class="chan"><h3>🔎 Sitemap indienen</h3><p>Dien deze sitemap in bij Search Console &amp; Bing: https://leadexpert.be/sitemap.xml</p><a class="go" href="https://leadexpert.be/sitemap.xml" target="_blank" rel="noopener">Openen ↗</a></div><div class="chan"><h3>🔎 Bing Webmaster Tools</h3><p>Importeer je site vanuit Search Console in één klik. Extra zoekverkeer, gratis.</p><a class="go" href="https://www.bing.com/webmasters" target="_blank" rel="noopener">Openen ↗</a></div><div class="chan"><h3>🔎 Sitemap pingen (Google)</h3><p>Open deze link telkens na een nieuwe batch om Google te laten herindexeren.</p><a class="go" href="https://www.google.com/ping?sitemap=https%3A%2F%2Fleadexpert.be%2Fsitemap.xml" target="_blank" rel="noopener">Openen ↗</a></div>
+  </div>
+
+</div>
+
+<footer>© 2026 LeadExpert · <a href="/">← Alle tools</a> · <a href="/growth">Growth Engine</a> · <a href="mailto:info@leadexpert.be">info@leadexpert.be</a></footer>
+
+<script>
+const DATA={"base":"https://leadexpert.be","wa":"32456901064","langs":[{"k":"nl","label":"Nederlands","flag":"🇳🇱"},{"k":"fr","label":"Français","flag":"🇫🇷"},{"k":"en","label":"English","flag":"🇬🇧"}],"services":[{"k":"website","icon":"🌐","color":"#06b6d4","name":{"nl":"Website","fr":"Site web","en":"Website"},"promise":{"nl":"Een website die klanten oplevert","fr":"Un site web qui génère des clients","en":"A website that brings in customers"}},{"k":"leads","icon":"🎯","color":"#f97316","name":{"nl":"Leadgeneratie","fr":"Génération de leads","en":"Lead generation"},"promise":{"nl":"Een stroom van nieuwe aanvragen","fr":"Un flux constant de nouvelles demandes","en":"A steady flow of new enquiries"}},{"k":"webshop","icon":"🛒","color":"#22c55e","name":{"nl":"Webshop","fr":"Boutique en ligne","en":"Webshop"},"promise":{"nl":"Online verkopen, dag en nacht","fr":"Vendez en ligne, jour et nuit","en":"Sell online, day and night"}},{"k":"whatsapp-automatisatie","icon":"💬","color":"#25d366","name":{"nl":"WhatsApp-automatisatie","fr":"Automatisation WhatsApp","en":"WhatsApp automation"},"promise":{"nl":"Antwoord klanten automatisch, 24/7","fr":"Répondez automatiquement, 24/7","en":"Reply to customers automatically, 24/7"}},{"k":"ai-agent","icon":"🤖","color":"#8b5cf6","name":{"nl":"AI-agent","fr":"Agent IA","en":"AI agent"},"promise":{"nl":"Een digitale medewerker die nooit slaapt","fr":"Un employé digital qui ne dort jamais","en":"A digital employee that never sleeps"}},{"k":"chatbot","icon":"💡","color":"#3b82f6","name":{"nl":"Chatbot","fr":"Chatbot","en":"Chatbot"},"promise":{"nl":"Zet bezoekers om in klanten, automatisch","fr":"Transformez vos visiteurs en clients, automatiquement","en":"Turn visitors into customers, automatically"}},{"k":"lokale-seo","icon":"🔍","color":"#ef4444","name":{"nl":"Lokale SEO","fr":"Référencement local","en":"Local SEO"},"promise":{"nl":"Bovenaan in Google in [stad]","fr":"En tête de Google à [stad]","en":"Rank at the top of Google in [stad]"}},{"k":"google-ads","icon":"📈","color":"#ea4335","name":{"nl":"Google Ads","fr":"Google Ads","en":"Google Ads"},"promise":{"nl":"Direct bovenaan Google, vanaf dag één","fr":"En tête de Google immédiatement, dès le premier jour","en":"Top of Google instantly, from day one"}},{"k":"email-marketing","icon":"📧","color":"#ec4899","name":{"nl":"E-mailmarketing","fr":"E-mail marketing","en":"Email marketing"},"promise":{"nl":"Verander eenmalige klanten in vaste klanten","fr":"Transformez vos clients ponctuels en clients fidèles","en":"Turn one-time buyers into repeat customers"}}],"sectors":[{"k":"aannemer","name":{"nl":"aannemer","fr":"entrepreneur en bâtiment","en":"contractor"}},{"k":"autogarage","name":{"nl":"autogarage","fr":"garage automobile","en":"car garage"}},{"k":"tandarts","name":{"nl":"tandartspraktijk","fr":"cabinet dentaire","en":"dental practice"}},{"k":"vastgoedmakelaar","name":{"nl":"vastgoedmakelaar","fr":"agent immobilier","en":"real estate agent"}},{"k":"kapper","name":{"nl":"kapper","fr":"coiffeur","en":"hair salon"}},{"k":"restaurant","name":{"nl":"restaurant","fr":"restaurant","en":"restaurant"}},{"k":"boekhouder","name":{"nl":"boekhouder","fr":"comptable","en":"accountant"}},{"k":"fysiotherapeut","name":{"nl":"kinesist","fr":"kinésithérapeute","en":"physiotherapist"}},{"k":"elektricien","name":{"nl":"elektricien","fr":"électricien","en":"electrician"}},{"k":"schoonheidsinstituut","name":{"nl":"schoonheidsinstituut","fr":"institut de beauté","en":"beauty salon"}},{"k":"advocaat","name":{"nl":"advocaat","fr":"avocat","en":"law firm"}},{"k":"loodgieter","name":{"nl":"loodgieter","fr":"plombier","en":"plumber"}},{"k":"tuinaannemer","name":{"nl":"tuinaannemer","fr":"paysagiste","en":"landscaper"}},{"k":"slotenmaker","name":{"nl":"slotenmaker","fr":"serrurier","en":"locksmith"}}],"cities":{"nl":[{"k":"antwerpen","name":"Antwerpen"},{"k":"gent","name":"Gent"},{"k":"brussel","name":"Brussel"},{"k":"mechelen","name":"Mechelen"},{"k":"hasselt","name":"Hasselt"},{"k":"brugge","name":"Brugge"},{"k":"leuven","name":"Leuven"},{"k":"amsterdam","name":"Amsterdam"},{"k":"rotterdam","name":"Rotterdam"},{"k":"eindhoven","name":"Eindhoven"}],"fr":[{"k":"bruxelles","name":"Bruxelles"},{"k":"liege","name":"Liège"},{"k":"namur","name":"Namur"},{"k":"charleroi","name":"Charleroi"},{"k":"paris","name":"Paris"},{"k":"lyon","name":"Lyon"},{"k":"marseille","name":"Marseille"},{"k":"geneve","name":"Genève"}],"en":[{"k":"london","name":"London"},{"k":"dublin","name":"Dublin"},{"k":"amsterdam","name":"Amsterdam"},{"k":"berlin","name":"Berlin"},{"k":"dubai","name":"Dubai"},{"k":"new-york","name":"New York"},{"k":"toronto","name":"Toronto"},{"k":"sydney","name":"Sydney"}]}};
+const $=(id)=>document.getElementById(id);
+const tag=(s)=>s.toLowerCase().replace(/[^a-z0-9]+/g,'');
+
+function fill(sel,items,val,label){sel.innerHTML=items.map(i=>'<option value="'+i[val]+'">'+i[label]+'</option>').join('')}
+fill($('s-lang'),DATA.langs.map(l=>({k:l.k,name:l.flag+' '+l.label})),'k','name');
+fill($('s-service'),DATA.services.map(s=>({k:s.k,name:s.icon+' '+s.name.nl})),'k','name');
+fill($('s-sector'),DATA.sectors.map(s=>({k:s.k,name:s.name.nl})),'k','name');
+function refreshCities(){fill($('s-city'),DATA.cities[$('s-lang').value],'k','name');}
+
+function ctx(){
+  const lang=$('s-lang').value,service=$('s-service').value,sector=$('s-sector').value,city=$('s-city').value;
+  const svc=DATA.services.find(x=>x.k===service);
+  const sec=DATA.sectors.find(x=>x.k===sector);
+  const cn=(DATA.cities[lang].find(x=>x.k===city)||{name:city}).name;
+  return {lang,service,sector,city,cn,
+    svcName:svc.name[lang],promise:svc.promise[lang].replace('[stad]',cn),
+    secName:sec.name[lang],icon:svc.icon,
+    url:DATA.base+'/'+lang+'/'+service+'/'+sector+'/'+city+'/'};
+}
+
+// Platform + language post templates.
+function makePost(p,c){
+  const L=c.lang, hashSec=tag(c.secName), hashCity=tag(c.cn);
+  const T={
+    nl:{
+      linkedin:c.svcName+' voor '+c.secName+' in '+c.cn+'? '+c.promise+'.\n\nBij LeadExpert ga je live in 7 werkdagen en test je 14 dagen gratis — geen kaart, geen risico.\n\n👉 '+c.url+'\n\n#'+hashSec+' #'+hashCity+' #leadexpert #ondernemen',
+      facebook:'📢 '+c.secName+' in '+c.cn+'? '+c.promise+'.\n\n14 dagen gratis testen, daarna pas beslissen. Bekijk hoe:\n'+c.url,
+      instagram:c.icon+' '+c.promise+' — voor '+c.secName+' in '+c.cn+'.\n\nLink in bio of swipe up 👆\n.\n.\n#'+hashSec+' #'+hashCity+' #leadexpert #'+tag(c.svcName)+' #ondernemenvlaanderen',
+      x:c.svcName+' voor '+c.secName+' in '+c.cn+'? '+c.promise+'. 14 dagen gratis → '+c.url,
+      whatsapp:'Hey! 👋 '+c.promise+' voor '+c.secName+'s in '+c.cn+'. 14 dagen gratis testen, kijk maar: '+c.url,
+      gbp:c.promise+' voor '+c.secName+' in '+c.cn+'. Live in 7 dagen, 14 dagen gratis testen. Meer info 👉 '+c.url
+    },
+    fr:{
+      linkedin:c.svcName+' pour '+c.secName+' à '+c.cn+' ? '+c.promise+'.\n\nAvec LeadExpert : en ligne en 7 jours, 14 jours d\'essai gratuit — sans carte, sans risque.\n\n👉 '+c.url+'\n\n#'+hashSec+' #'+hashCity+' #leadexpert',
+      facebook:'📢 '+c.secName+' à '+c.cn+' ? '+c.promise+'.\n\n14 jours d\'essai gratuit, vous décidez ensuite :\n'+c.url,
+      instagram:c.icon+' '+c.promise+' — pour '+c.secName+' à '+c.cn+'.\n\nLien en bio 👆\n.\n.\n#'+hashSec+' #'+hashCity+' #leadexpert #'+tag(c.svcName),
+      x:c.svcName+' pour '+c.secName+' à '+c.cn+' ? '+c.promise+'. 14 jours gratuits → '+c.url,
+      whatsapp:'Bonjour ! 👋 '+c.promise+' pour les '+c.secName+'s à '+c.cn+'. 14 jours gratuits : '+c.url,
+      gbp:c.promise+' pour '+c.secName+' à '+c.cn+'. En ligne en 7 jours, essai gratuit 14 jours. Infos 👉 '+c.url
+    },
+    en:{
+      linkedin:c.svcName+' for a '+c.secName+' in '+c.cn+'? '+c.promise+'.\n\nWith LeadExpert: live in 7 days, 14-day free trial — no card, no risk.\n\n👉 '+c.url+'\n\n#'+hashSec+' #'+hashCity+' #leadexpert',
+      facebook:'📢 '+c.secName+' in '+c.cn+'? '+c.promise+'.\n\n14-day free trial, decide after. See how:\n'+c.url,
+      instagram:c.icon+' '+c.promise+' — for a '+c.secName+' in '+c.cn+'.\n\nLink in bio 👆\n.\n.\n#'+hashSec+' #'+hashCity+' #leadexpert #'+tag(c.svcName),
+      x:c.svcName+' for a '+c.secName+' in '+c.cn+'? '+c.promise+'. 14-day free trial → '+c.url,
+      whatsapp:'Hi! 👋 '+c.promise+' for '+c.secName+'s in '+c.cn+'. 14-day free trial: '+c.url,
+      gbp:c.promise+' for '+c.secName+' in '+c.cn+'. Live in 7 days, 14-day free trial. More 👉 '+c.url
+    }
+  };
+  return (T[L]||T.nl)[p];
+}
+
+let curPlatform='linkedin';
+function renderPost(){
+  const c=ctx();
+  const txt=makePost(curPlatform,c).replace(/\\n/g,'\n');
+  $('postText').textContent=txt;
+  $('postUrl').textContent=c.url;
+  $('postLen').textContent=txt.length+' tekens';
+}
+$('tabs').addEventListener('click',e=>{const b=e.target.closest('.tab');if(!b)return;
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));b.classList.add('on');
+  curPlatform=b.dataset.p;renderPost();});
+$('s-lang').addEventListener('change',()=>{refreshCities();renderPost();});
+['s-service','s-sector','s-city'].forEach(id=>$(id).addEventListener('change',renderPost));
+$('copyPost').addEventListener('click',()=>{const t=$('postText').textContent;
+  navigator.clipboard&&navigator.clipboard.writeText(t);
+  const b=$('copyPost');b.textContent='gekopieerd ✓';setTimeout(()=>b.textContent='kopieer ⧉',1300);});
+
+// "Posts" buttons on today's cards prefill the generator.
+document.querySelectorAll('.promo-card .gen').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const card=btn.closest('.promo-card');
+    $('s-lang').value=card.dataset.lang;refreshCities();
+    $('s-service').value=card.dataset.service;
+    $('s-sector').value=card.dataset.sector;
+    $('s-city').value=card.dataset.city;
+    renderPost();
+    document.getElementById('posts').scrollIntoView({behavior:'smooth'});
+  });
+});
+
+// Daily checklist with localStorage, auto-resets each day.
+const todayKey=()=>{const d=new Date();return 'le_promo_'+d.getUTCFullYear()+'_'+d.getUTCMonth()+'_'+d.getUTCDate();};
+const TOTAL=7;
+function loadState(){try{return JSON.parse(localStorage.getItem(todayKey()))||{}}catch(e){return {}}}
+function saveState(s){try{localStorage.setItem(todayKey(),JSON.stringify(s))}catch(e){}}
+function paintChecklist(){
+  const s=loadState();let done=0;
+  document.querySelectorAll('.task').forEach(t=>{
+    const i=t.dataset.task;if(s[i]){t.classList.add('done');done++}else t.classList.remove('done');
+  });
+  $('clBar').style.width=(done/TOTAL*100)+'%';
+  $('clCount').textContent=done+'/'+TOTAL+' klaar';
+}
+document.getElementById('taskList').addEventListener('click',e=>{
+  const t=e.target.closest('.task');if(!t)return;
+  const s=loadState();const i=t.dataset.task;s[i]=!s[i];saveState(s);paintChecklist();
+});
+$('clReset').addEventListener('click',()=>{saveState({});paintChecklist();});
+$('clDate').textContent=new Date().toLocaleDateString('nl-BE',{weekday:'long',day:'numeric',month:'long'});
+
+refreshCities();renderPost();paintChecklist();
+</script>
+</body>
+</html>
